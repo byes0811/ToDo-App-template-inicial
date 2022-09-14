@@ -8,17 +8,18 @@ window.addEventListener('load', function () {
 
   /* ---------------- variables globales y llamado a funciones ---------------- */
   
+const btnCerrarSesion = document.querySelector("#closeApp");
 
+const formCrearTarea = document.querySelector("#nuevaTarea");
 
   /* -------------------------------------------------------------------------- */
   /*                          FUNCIÓN 1 - Cerrar sesión                         */
   /* -------------------------------------------------------------------------- */
 
   btnCerrarSesion.addEventListener('click', function () {
-   
 
-
-
+   localStorage.removeItem("jwt");
+   location.replace("/index.html");
   });
 
   /* -------------------------------------------------------------------------- */
